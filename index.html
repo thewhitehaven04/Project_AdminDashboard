@@ -6,44 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto"
+    />
+    <script
+      src="https://kit.fontawesome.com/c39ce3c901.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="container">
-      <nav class="nav-grid-col grid-1-col gap-15">
-        <ul class="grid-1-col gap-15">
-          <li class="font-1_5rem">Home</li>
-          <li class="font-1_5rem">Profile</li>
-          <li class="font-1_5rem">Messages</li>
-          <li class="font-1_5rem">History</li>
-          <li class="font-1_5rem">Tasks</li>
-          <li class="font-1_5rem">Communities</li>
+      <nav class="nav-grid-col gap-30 padding-v-15 background-dark-blue color-light">
+        <div class="padding-h-15">
+          <span class="font-2rem">
+            <i class="fa-solid fa-table font-2rem"></i> Dashboard
+          </span>
+        </div>
+        <ul class="grid-1-col-fixed gap-15 font-bold padding-h-15">
+          <li><i class="fa-solid fa-house-user"></i><span>Home</span></li>
+          <li><i class="fa-solid fa-user"></i><span>Profile</span></li>
+          <li><i class="fa-solid fa-message"></i><span>Messages</span></li>
+          <li><i class="fa-solid fa-timeline"></i><span>History</span></li>
+          <li><i class="fa-solid fa-list-check"></i><span>Tasks</span></li>
+          <li><i class="fa-solid fa-people-group"></i><span>Communities</span></li>
         </ul>
-        <ul class="grid-1-col gap-15">
-          <li class="font-1_5rem">Settings</li>
-          <li class="font-1_5rem">Support</li>
-          <li class="font-1_5rem">Privacy</li>
+        <ul class="grid-1-col-fixed gap-15 font-bold padding-h-15">
+          <li><i class="fa-solid fa-gear"></i><span>Settings</span></li>
+          <li><i class="fa-solid fa-info"></i><span>Support</span></li>
+          <li><i class="fa-solid fa-eye-slash"></i><span>Privacy</span></li>
         </ul>
       </nav>
       <header class="header-grid-row">
-        <div>
-          <input type="search" />
-          <button>Notifications</button>
-          <button>thewhitehaven04</button>
-        </div>
-        <div class="grid-1-row">
-          <div class="grid-1-row">
-              <img alt="Account picture" src=""></ing>
-              <div class="grid-1-col">
-            <span> Hi there, </span>
-            <span>Someone (@thewhitehaven04)</span>
-              </div>
+        <div class="grid-header-top align-center">
+          <div>
+            <input type="search" />
           </div>
-         <div> 
-          <ul class="grid-1-row gap-15">
-            <li><button>New</button></li>
-            <li><button>Upload</button></li>
-            <li><button>Share</button></li>
-          </ul>
+          <div class="grid-header-account">
+            <div>
+              <button>Notifications</button>
+            </div>
+            <img src="./images/userpic.jpg" id="userpic-large" />
+            <div>
+              <button>thewhitehaven04</button>
+            </div>
+          </div>
+        </div>
+        <div class="grid-1-row-auto">
+          <div class="grid-1-row-fixed">
+            <img
+              alt="Account picture"
+              src="./images/userpic.jpg"
+              id="userpic-small"
+            />
+            <div class="grid-1-col">
+              <span> Hi there, </span>
+              <span>Someone (@thewhitehaven04)</span>
+            </div>
+          </div>
+          <div>
+            <ul class="grid-1-row grid-1-row-fixed">
+              <li><button>New</button></li>
+              <li><button>Upload</button></li>
+              <li><button>Share</button></li>
+            </ul>
           </div>
         </div>
       </header>

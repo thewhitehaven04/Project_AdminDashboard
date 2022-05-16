@@ -2,29 +2,81 @@ html {
   box-sizing: border-box;
 }
 
-*,
 *::after,
 *::before {
   box-sizing: inherit;
 }
 
 * {
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  font-weight: 500;
   font-size: 16px;
+
+  --sky-50: #f0f9ff;
+  --sky-100: #e0f2fe;
+  --sky-200: #bae6fd;
+  --sky-300: #7dd3fc;
+  --sky-400: #38bdf8;
+  --sky-500: #0ea5e9;
+  --sky-600: #0284c7;
+  --sky-700: #0369a1;
+  --sky-800: #075985;
+  --sky-900: #0c4a6e;
+}
+
+/** Color palette styles */
+.background-dark-blue {
+  background-color: var(--sky-700);
+}
+
+.color-light {
+  color: var(--sky-50);
 }
 
 li {
   list-style-type: none;
 }
 
+input[type='search'] {
+  width: 100%;
+}
+
+.fa-solid {
+  width: 40px;
+  text-align: center;
+}
+
 /** The following classes define general page layout */
 .container {
+  height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-template-rows: 250px 1fr;
+  grid-template-columns: minmax(1fr, max-content) 4fr;
+  grid-template-rows: 1fr 3fr;
+
+  gap: 40px;
+  margin: -10px;
+}
+
+.padding-h-15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.padding-v-15 {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .nav-grid-col {
   grid-column: 1;
+  grid-row: 1 / span 2;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px minmax(200px, 2fr) minmax(150px, 1fr);
+
+  gap: 40px;
 }
 
 .header-grid-row {
@@ -38,40 +90,84 @@ li {
 }
 
 /** Grid layouts used throughout the page */
-.grid-1-col {
+.grid-1-col-fixed {
   display: grid;
   grid-template-columns: 1fr;
-  grid-auto-flow: row;
+  grid-auto-rows: 2rem;
 }
 
-.grid-2-col {
+.grid-2-cols {
   display: grid;
-  grid-template-columns: 2fr;
-  grid-auto-flow: row;
+  grid-template-columns: 1fr 1fr;
 }
 
-.grid-1-row {
+.gap-30 {
+  gap: 30px;
+}
+
+.grid-1-row-fixed {
   display: grid;
   grid-auto-flow: column;
+  grid-auto-columns: 150px;
 }
 
-.columns-100 {
-    grid-auto-columns: 100px;
+.grid-1-row-auto {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
 }
 
-.columns-1fr {
-    grid-auto-columns: 1fr;
+.grid-header-top {
+  display: grid;
+  grid-template-columns: minmax(450px, 4fr) 3fr;
+  gap: 70px;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.grid-header-account {
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr;
+  gap: 20px;
+
+  align-items: center;
 }
 
 .gap-15 {
   gap: 15px;
 }
 
-/** Typical font sizes */
-.font-2_5rem {
-  font-size: 2.5rem;
+/** Large userpic */
+#userpic-small {
+  border-radius: 50%;
+
+  width: 80px;
+  height: 80px;
+}
+
+#userpic-large {
+  border-radius: 50%;
+
+  width: 120px;
+  height: 120px;
+}
+
+/** Font styles */
+.font-bold {
+  font-weight: 600;
+}
+
+.font-2rem {
+  font-size: 2rem;
 }
 
 .font-1_5rem {
   font-size: 1.5rem;
 }
+
+.font-3rem {
+  font-size: 3rem;
+}
+
