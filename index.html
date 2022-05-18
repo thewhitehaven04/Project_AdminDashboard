@@ -16,8 +16,10 @@
     ></script>
   </head>
   <body>
-    <div class="container">
-      <nav class="nav-grid-col gap-30 padding-v-15 background-dark-blue color-light">
+    <div class="container gap-30">
+      <nav
+        class="nav-grid-col gap-30 padding-v-15 background-dark-blue color-light align-content-start"
+      >
         <div class="padding-h-15">
           <span class="font-2rem">
             <i class="fa-solid fa-table font-2rem"></i> Dashboard
@@ -29,7 +31,9 @@
           <li><i class="fa-solid fa-message"></i><span>Messages</span></li>
           <li><i class="fa-solid fa-timeline"></i><span>History</span></li>
           <li><i class="fa-solid fa-list-check"></i><span>Tasks</span></li>
-          <li><i class="fa-solid fa-people-group"></i><span>Communities</span></li>
+          <li>
+            <i class="fa-solid fa-people-group"></i><span>Communities</span>
+          </li>
         </ul>
         <ul class="grid-1-col-fixed gap-15 font-bold padding-h-15">
           <li><i class="fa-solid fa-gear"></i><span>Settings</span></li>
@@ -73,66 +77,103 @@
           </div>
         </div>
       </header>
-      <main class="main-grid-row">
-        <span>Your Projects</span>
-        <div class="grid-2-cols">
-          <article>
-            <span>Tic-Tac-Toe</span>
+      <main class="main-grid gap-30">
+        <div class="article-grid gap-15">
+          <article class="article-card article-card-grid border-round">
+            <span class="color-black">Tic-Tac-Toe</span>
             <p>A vanilla JS implementation of the classic game</p>
+            <div class="self-j-end">
+              <button>Favourite</button>
+              <button>Mark as read</button>
+              <button>Share</button>
+            </div>
           </article>
-          <article>
-            <span>Calculator</span>
+          <article class="article-card article-card-grid border-round">
+            <span class="color-black">Calculator</span>
             <p>Your cookie-cutter calculator</p>
+            <div class="self-j-end">
+              <button>Favourite</button>
+              <button>Mark as read</button>
+              <button>Share</button>
+            </div>
           </article>
-          <article>
-            <span>Sign-up Form</span>
+          <article class="article-card article-card-grid border-round">
+            <span class="color-black">Sign-up Form</span>
             <p>A stylish form to show off CSS skills</p>
+            <div class="self-j-end">
+              <button>Favourite</button>
+              <button>Mark as read</button>
+              <button>Share</button>
+            </div>
           </article>
-          <article>
-            <span>Etch-A-Sketch</span>
+          <article class="article-card article-card-grid border-round">
+            <span class="color-black">Etch-A-Sketch</span>
             <p>The famous toy in JS</p>
+            <div class="self-j-end">
+              <button>Favourite</button>
+              <button>Mark as read</button>
+              <button>Share</button>
+            </div>
           </article>
-          <article>
-            <span>Rock-Paper-Scissors</span>
+          <article class="article-card article-card-grid border-round">
+            <span class="color-black">Rock-Paper-Scissors</span>
             <p>Rock Paper Scissors in all of its glory</p>
+            <div class="self-j-end">
+              <button>Favourite</button>
+              <button>Mark as read</button>
+              <button>Share</button>
+            </div>
           </article>
-          <article>
-            <span>Landing Page</span>
+          <article class="article-card article-card-grid border-round">
+            <span class="color-black">Landing Page</span>
             <p>First steps in HTML and CSS</p>
+            <div class="self-j-end">
+              <button>Favourite</button>
+              <button>Mark as read</button>
+              <button>Share</button>
+            </div>
           </article>
         </div>
-        <div class="announcements"></div>
-        <article>
-          <span>Site Maintenance</span>
-          <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet.
-          </p>
-        </article>
-        <article>
-          <span>Community share day</span>
-          <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet.
-          </p>
-        </article>
-        <article>
-          <span>Updated Privacy Policy</span>
-          <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet.
-          </p>
-        </article>
-        <div class="trending"></div>
+        <div class="announcements-grid gap-15">
+          <article>
+            <span>Site Maintenance</span>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            </p>
+          </article>
+          <article>
+            <span>Community share day</span>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            </p>
+          </article>
+          <article>
+            <span>Updated Privacy Policy</span>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            </p>
+          </article>
+        </div>
+        <div class="trending-grid gap-15">
+          <article>
+            <span>Updated Privacy Policy</span>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            </p>
+          </article>
+          <article>
+            <span>Updated Privacy Policy</span>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            </p>
+          </article>
+          <article>
+            <span>Updated Privacy Policy</span>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            </p>
+          </article>
+        </div>
       </main>
     </div>
   </body>

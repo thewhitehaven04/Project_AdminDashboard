@@ -23,6 +23,8 @@ html {
   --sky-700: #0369a1;
   --sky-800: #075985;
   --sky-900: #0c4a6e;
+  --black: #333333;
+  --grey: #AAAAAA;
 }
 
 /** Color palette styles */
@@ -32,6 +34,14 @@ html {
 
 .color-light {
   color: var(--sky-50);
+}
+
+.color-black {
+  color: var(--black);
+}
+
+.color-grey {
+  color: var(--grey)
 }
 
 li {
@@ -52,9 +62,8 @@ input[type='search'] {
   height: 100vh;
   display: grid;
   grid-template-columns: minmax(1fr, max-content) 4fr;
-  grid-template-rows: 1fr 3fr;
+  grid-template-rows: max-content 3fr;
 
-  gap: 40px;
   margin: -10px;
 }
 
@@ -74,9 +83,6 @@ input[type='search'] {
 
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 100px minmax(200px, 2fr) minmax(150px, 1fr);
-
-  gap: 40px;
 }
 
 .header-grid-row {
@@ -96,13 +102,44 @@ input[type='search'] {
   grid-auto-rows: 2rem;
 }
 
-.grid-2-cols {
+.main-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
 }
 
-.gap-30 {
-  gap: 30px;
+.article-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+
+.article-card {
+  border: 1px solid gray;
+  color: grey;
+
+  padding: 10px;
+}
+
+.article-card-grid {
+  display: grid;
+  grid-template-rows: 1rem 1fr 2rem;
+  align-content: flex-start;
+}
+
+.trending-grid .announcements-grid { 
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column: 3;
+}
+
+.trending-grid {
+  grid-row: 1;
+}
+
+.announcements-grid {
+  grid-row: 2;
 }
 
 .grid-1-row-fixed {
@@ -123,10 +160,6 @@ input[type='search'] {
   gap: 70px;
 }
 
-.align-center {
-  align-items: center;
-}
-
 .grid-header-account {
   display: grid;
   grid-template-columns: 1fr 1fr 3fr;
@@ -135,8 +168,30 @@ input[type='search'] {
   align-items: center;
 }
 
+/** Grid gap styles */
+.gap-30 {
+  gap: 30px;
+}
+
 .gap-15 {
   gap: 15px;
+}
+
+/** Aligns content along the block axis */ 
+.align-content-start {
+  align-content: start;
+}
+
+.align-content-center {
+  align-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.self-j-end {
+  justify-self: end; 
 }
 
 /** Large userpic */
@@ -171,3 +226,8 @@ input[type='search'] {
   font-size: 3rem;
 }
 
+/** Border styles */
+
+.border-round {
+  border-radius: 8px;
+}
