@@ -16,16 +16,16 @@
     ></script>
   </head>
   <body>
-    <div class="container gap-30">
+    <div class="container">
       <nav
-        class="nav-grid-col gap-30 padding-v-15 background-dark-blue color-light align-content-start"
+        class="nav-grid-col gap-30 padding-10 background-dark-blue color-light align-content-start border-shadow"
       >
-        <div class="padding-h-15">
+        <div>
           <span class="font-2rem">
             <i class="fa-solid fa-table font-2rem"></i> Dashboard
           </span>
         </div>
-        <ul class="grid-1-col-fixed gap-15 font-bold padding-h-15">
+        <ul class="grid-navbar-items gap-15 font-bold padding-10">
           <li><i class="fa-solid fa-house-user"></i><span>Home</span></li>
           <li><i class="fa-solid fa-user"></i><span>Profile</span></li>
           <li><i class="fa-solid fa-message"></i><span>Messages</span></li>
@@ -35,51 +35,53 @@
             <i class="fa-solid fa-people-group"></i><span>Communities</span>
           </li>
         </ul>
-        <ul class="grid-1-col-fixed gap-15 font-bold padding-h-15">
+        <ul class="grid-navbar-items gap-15 font-bold padding-10">
           <li><i class="fa-solid fa-gear"></i><span>Settings</span></li>
           <li><i class="fa-solid fa-info"></i><span>Support</span></li>
           <li><i class="fa-solid fa-eye-slash"></i><span>Privacy</span></li>
         </ul>
       </nav>
-      <header class="header-grid-row">
-        <div class="grid-header-top align-center">
+      <header
+        class="header-grid-row header-grid padding-h-40 border-shadow gap-30"
+      >
+        <div class="header-search-grid-placement">
+          <input type="search" />
+        </div>
+        <div class="grid-header-account header-account-grid-placement">
           <div>
-            <input type="search" />
+            <button>Notifications</button>
           </div>
-          <div class="grid-header-account">
-            <div>
-              <button>Notifications</button>
-            </div>
-            <img src="./images/userpic.jpg" id="userpic-large" />
-            <div>
-              <button>thewhitehaven04</button>
-            </div>
+          <img src="./images/userpic.jpg" id="userpic-large" />
+          <div>
+            <button>thewhitehaven04</button>
           </div>
         </div>
-        <div class="grid-1-row-auto">
-          <div class="grid-1-row-fixed">
-            <img
-              alt="Account picture"
-              src="./images/userpic.jpg"
-              id="userpic-small"
-            />
-            <div class="grid-1-col">
-              <span> Hi there, </span>
-              <span>Someone (@thewhitehaven04)</span>
-            </div>
-          </div>
+        <div class="grid-account-welcome account-welcome-grid-placement gap-15">
+          <img
+            alt="Account picture"
+            src="./images/userpic.jpg"
+            id="userpic-small"
+          />
           <div>
-            <ul class="grid-1-row grid-1-row-fixed">
-              <li><button>New</button></li>
-              <li><button>Upload</button></li>
-              <li><button>Share</button></li>
-            </ul>
+            <span> Hi there, </span>
+            <br />
+            <span>Someone (@thewhitehaven04)</span>
           </div>
+        </div>
+        <div class="card-controls-grid-placement">
+          <ul class="grid-card-controls">
+            <li><button>New</button></li>
+            <li><button>Upload</button></li>
+            <li><button>Share</button></li>
+          </ul>
         </div>
       </header>
-      <main class="main-grid gap-30">
+      <main class="main-grid gap-15 padding-h-40">
+        <span class="project-title align-center">Your projects</span>
         <div class="article-grid gap-15">
-          <article class="article-card article-card-grid border-round">
+          <article
+            class="article-card article-card-grid border-round border-shadow"
+          >
             <span class="color-black">Tic-Tac-Toe</span>
             <p>A vanilla JS implementation of the classic game</p>
             <div class="self-j-end">
@@ -88,7 +90,9 @@
               <button>Share</button>
             </div>
           </article>
-          <article class="article-card article-card-grid border-round">
+          <article
+            class="article-card article-card-grid border-round border-shadow"
+          >
             <span class="color-black">Calculator</span>
             <p>Your cookie-cutter calculator</p>
             <div class="self-j-end">
@@ -97,7 +101,9 @@
               <button>Share</button>
             </div>
           </article>
-          <article class="article-card article-card-grid border-round">
+          <article
+            class="article-card article-card-grid border-round border-shadow"
+          >
             <span class="color-black">Sign-up Form</span>
             <p>A stylish form to show off CSS skills</p>
             <div class="self-j-end">
@@ -106,7 +112,9 @@
               <button>Share</button>
             </div>
           </article>
-          <article class="article-card article-card-grid border-round">
+          <article
+            class="article-card article-card-grid border-round border-shadow"
+          >
             <span class="color-black">Etch-A-Sketch</span>
             <p>The famous toy in JS</p>
             <div class="self-j-end">
@@ -115,7 +123,9 @@
               <button>Share</button>
             </div>
           </article>
-          <article class="article-card article-card-grid border-round">
+          <article
+            class="article-card article-card-grid border-round border-shadow"
+          >
             <span class="color-black">Rock-Paper-Scissors</span>
             <p>Rock Paper Scissors in all of its glory</p>
             <div class="self-j-end">
@@ -124,7 +134,9 @@
               <button>Share</button>
             </div>
           </article>
-          <article class="article-card article-card-grid border-round">
+          <article
+            class="article-card article-card-grid border-round border-shadow"
+          >
             <span class="color-black">Landing Page</span>
             <p>First steps in HTML and CSS</p>
             <div class="self-j-end">
@@ -134,45 +146,57 @@
             </div>
           </article>
         </div>
-        <div class="announcements-grid gap-15">
-          <article>
-            <span>Site Maintenance</span>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            </p>
-          </article>
-          <article>
-            <span>Community share day</span>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            </p>
-          </article>
-          <article>
-            <span>Updated Privacy Policy</span>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            </p>
-          </article>
+        <span class="announcements-title">Announcements</span>
+        <div class="announcements-grid">
+          <div class="article-card border-round border-shadow">
+            <article>
+              <span class="color-black">Site Maintenance</span>
+              <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam
+              </p>
+            </article>
+            <article>
+              <span class="color-black">Community share day</span>
+              <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam
+              </p>
+            </article>
+            <article>
+              <span class="color-black">Updated Privacy Policy</span>
+              <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam
+              </p>
+            </article>
+          </div>
         </div>
-        <div class="trending-grid gap-15">
-          <article>
-            <span>Updated Privacy Policy</span>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            </p>
-          </article>
-          <article>
-            <span>Updated Privacy Policy</span>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            </p>
-          </article>
-          <article>
-            <span>Updated Privacy Policy</span>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            </p>
-          </article>
+        <span class="trending-title">Trending</span>
+        <div class="trending-grid">
+          <div class="article-card border-round border-shadow">
+            <article>
+              <span class="color-black">Updated Privacy Policy</span>
+              <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam
+              </p>
+            </article>
+            <article class="color-black">
+              <span>Updated Privacy Policy</span>
+              <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam
+              </p>
+            </article>
+            <article>
+              <span class="color-black">Updated Privacy Policy</span>
+              <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam
+              </p>
+            </article>
+          </div>
         </div>
       </main>
     </div>
