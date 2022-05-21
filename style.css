@@ -23,10 +23,10 @@ html {
   --sky-700: #0369a1;
   --sky-800: #075985;
   --sky-900: #0c4a6e;
-  --black: #333333;
+  --black: #222;
   --grey: #666666;
-  --shadow-grey: #cccccc;
-  --light-grey: rgb(240, 240, 240, 0.4);
+  --shadow-grey: #aaaaaa;
+  --light-grey: rgba(120, 141, 170, 0.12);
 }
 
 body {
@@ -40,10 +40,6 @@ button {
 /** Color palette styles */
 .background-dark-blue {
   background-color: var(--sky-700);
-}
-
-.background-light-grey-main {
-  background-color: var(--sky-50);
 }
 
 .color-light {
@@ -120,7 +116,6 @@ input[type='search'] {
   align-items: center;
 
   padding-top: 15px;
-  background-color: var(--light-grey);
 }
 
 .header-grid-row {
@@ -164,8 +159,20 @@ input[type='search'] {
 
 .grid-card-controls {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 100px);
+  grid-template-columns: repeat(auto-fill, 120px);
   justify-items: center;
+}
+
+.grid-card-controls button {
+  border-radius: 10px;
+  border: none;
+  background-color: var(--light-grey);
+  height: 3rem;
+  padding: 10px;
+}
+
+.grid-card-controls button:active {
+  transform: translateY(1.5px);
 }
 
 /** The following css rulesets place descendant grids of the main element*/
@@ -185,6 +192,7 @@ input[type='search'] {
     'proj trending';
   padding-bottom: 15px;
   padding-top: 15px;
+  background-color: var(--light-grey);
 }
 
 .project-title {
@@ -200,7 +208,7 @@ input[type='search'] {
 
 .article-card {
   border: 1px solid var(--shadow-grey);
-  color: var(--grey);
+  background-color: white;
   padding: 10px;
 }
 
@@ -216,8 +224,15 @@ input[type='search'] {
   align-self: center;
 }
 
-.trending-grid {
+.trending-grid-placement {
   grid-area: trending;
+}
+
+.trending-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: fit-content; 
+  row-gap: 10px;
 }
 
 .announcements-title {
@@ -225,11 +240,10 @@ input[type='search'] {
   align-self: center;
 }
 
-.announcements-grid {
-  grid-area: 'announcements';
+.announcements-grid-placement {
+  grid-area: announcements;
 }
 
-.trending-grid,
 .announcements-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -242,10 +256,26 @@ input[type='search'] {
   align-items: flex-start;
 }
 
-.announcement-image {
-  width: 50px;
+.trending-card-grid {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  column-gap: 20px;
+  align-items: center;
+}
+
+.announcement-image, 
+.userpic-image {
   height: auto;
   justify-self: center;
+}
+
+.userpic-image {
+  width: 75px;
+  border-radius: 50%;
+}
+
+.announcement-image {
+  width: 60px;
 }
 
 /** Grid gap styles */

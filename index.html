@@ -70,9 +70,9 @@
         </div>
         <div class="card-controls-grid-placement">
           <ul class="grid-card-controls">
-            <li><button>New</button></li>
-            <li><button>Upload</button></li>
-            <li><button>Share</button></li>
+            <li><button class="font-1_5rem">New</button></li>
+            <li><button class="font-1_5rem">Upload</button></li>
+            <li><button class="font-1_5rem">Share</button></li>
           </ul>
         </div>
       </header>
@@ -147,7 +147,7 @@
           </article>
         </div>
         <div><span class="announcements-title">Announcements</span></div>
-        <div class="announcements-grid">
+        <div class="announcements-grid-placement announcements-grid">
           <div class="article-card border-round border-shadow">
             <article class="announcement-card-grid">
               <img class="announcement-image" src="./images/screwdriver.png" />
@@ -190,30 +190,53 @@
           </div>
         </div>
         <div><span class="trending-title">Trending</span></div>
-        <div class="trending-grid">
-          <div class="article-card border-round border-shadow">
-            <article>
-              <span class="color-black">Updated Privacy Policy</span>
-              <p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam
-              </p>
-            </article>
-            <article class="color-black">
-              <span>Updated Privacy Policy</span>
-              <p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam
-              </p>
-            </article>
-            <article>
-              <span class="color-black">Updated Privacy Policy</span>
-              <p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam
-              </p>
-            </article>
-          </div>
+        <div
+          class="trending-grid-placement article-card trending-grid border-round border-shadow"
+        >
+          <article class="trending-card-grid">
+            <img
+              class="userpic-image"
+              src="./images/userpic_gendo.jpg"
+              alt="TypeScript logo"
+            />
+            <div>
+              <span class="color-black">@gendoikari</span>
+              <p>Gendo Ikari</p>
+            </div>
+          </article>
+          <article class="trending-card-grid">
+            <img
+              class="userpic-image"
+              src="./images/userpic_rei.png"
+              alt="TypeScript logo"
+            />
+            <div>
+              <span class="color-black">@whatami</span>
+              <p>Rei Ayanami</p>
+            </div>
+          </article>
+          <article class="trending-card-grid">
+            <img
+              class="userpic-image"
+              src="./images/userpic_ramiel.webp"
+              alt="TypeScript logo"
+            />
+            <div>
+              <span class="color-black">@idontgiveashit</span>
+              <p>Ramiel</p>
+            </div>
+          </article>
+          <article class="trending-card-grid">
+            <img
+              class="userpic-image"
+              src="./images/userpic_misato.webp"
+              alt="TypeScript logo"
+            />
+            <div>
+              <span class="color-black">@NERVMisato</span>
+              <p>Misato Katsuragi</p>
+            </div>
+          </article>
         </div>
       </main>
     </div>
