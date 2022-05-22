@@ -8,8 +8,8 @@ html {
 }
 
 * {
-  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu,
+    Cantarell, 'Helvetica Neue', sans-serif;
   font-weight: 500;
   font-size: 16px;
 
@@ -23,10 +23,9 @@ html {
   --sky-700: #0369a1;
   --sky-800: #075985;
   --sky-900: #0c4a6e;
-  --black: #222;
   --grey: #666666;
   --shadow-grey: #aaaaaa;
-  --light-grey: rgba(120, 141, 170, 0.12);
+  --light-grey: rgba(139, 160, 189, 0.214);
 }
 
 body {
@@ -35,6 +34,7 @@ body {
 
 button {
   appearance: none;
+  border: none;
 }
 
 /** Color palette styles */
@@ -59,7 +59,22 @@ li {
 }
 
 input[type='search'] {
-  width: 100%;
+  width: 750px;
+  max-width: 100%;
+  appearance: none;
+  box-shadow: 1px 2px 4px 0px var(--shadow-grey);
+  background-color: var(--light-grey);
+  position: relative;
+}
+
+input[type='search']::before {
+  position: absolute;
+  content: '<i class="fa-solid fa-magnifying-glass"></i>';
+}
+
+input[type='search']:focus {
+  outline: 2px solid var(--shadow-grey);
+  outline-offset: 2px;
 }
 
 /** The following classes define general page layout */
@@ -77,9 +92,9 @@ input[type='search'] {
   padding-right: 40px;
 }
 
-.padding-v-25 {
-  padding-top: 25px;
-  padding-bottom: 25px;
+.padding-v-15 {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .padding-10 {
@@ -87,6 +102,11 @@ input[type='search'] {
 }
 
 /** navbar classes */
+.flex-branding {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
 .nav-grid-col {
   grid-column: 1;
   grid-row: 1 / span 2;
@@ -102,6 +122,10 @@ input[type='search'] {
   grid-auto-rows: 1.5rem;
 }
 
+.grid-navbar-items li {
+  cursor: pointer;
+}
+
 .fa-solid {
   width: 40px;
   text-align: center;
@@ -114,8 +138,7 @@ input[type='search'] {
   grid-template-columns: 3fr 2fr;
   grid-template-rows: 1fr 1fr;
   align-items: center;
-
-  padding-top: 15px;
+  padding-inline: 80px;
 }
 
 .header-grid-row {
@@ -126,6 +149,7 @@ input[type='search'] {
 .header-search-grid-placement {
   grid-row: 1;
   grid-column: 1;
+  justify-self: center;
 }
 
 .header-account-grid-placement {
@@ -135,15 +159,27 @@ input[type='search'] {
 
 .grid-header-account {
   display: grid;
-  grid-template-columns: 1fr 1fr 3fr;
-  gap: 20px;
+  grid-template-columns: 50px 300px;
+  grid-auto-flow: row;
+  gap: 10px;
 
   align-items: center;
+}
+
+.grid-header-account button {
+  background-color: white;
 }
 
 .account-welcome-grid-placement {
   grid-row: 2;
   grid-column: 1;
+}
+
+.flex-account {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: 20px;
 }
 
 .grid-account-welcome {
@@ -161,17 +197,17 @@ input[type='search'] {
   display: grid;
   grid-template-columns: repeat(auto-fill, 120px);
   justify-items: center;
+  gap: 15px;
 }
 
 .grid-card-controls button {
-  border-radius: 10px;
-  border: none;
-  background-color: var(--light-grey);
+  border-radius: 25px;
   height: 3rem;
   padding: 10px;
+  width: 100px;
 }
 
-.grid-card-controls button:active {
+button:active {
   transform: translateY(1.5px);
 }
 
@@ -184,7 +220,7 @@ input[type='search'] {
 .main-grid {
   display: grid;
   grid-template-columns: 5fr 2fr;
-  grid-template-rows: 1.2rem 1fr 1.2rem 1fr;
+  grid-template-rows: 2rem 1fr 2rem 1fr;
   grid-template-areas:
     'proj-title announcements-title'
     'proj announcements'
@@ -203,13 +239,13 @@ input[type='search'] {
 .article-grid {
   grid-area: proj;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 }
 
 .article-card {
   border: 1px solid var(--shadow-grey);
   background-color: white;
-  padding: 10px;
+  padding: 20px;
 }
 
 .article-card-grid {
@@ -218,9 +254,21 @@ input[type='search'] {
   align-content: flex-start;
 }
 
+.article-card-grid button,
+.grid-header-account button {
+  width: 40px;
+  height: auto;
+  padding: 5px;
+}
+
 /** Announcement and trending column grids */
 .trending-title {
   grid-area: trending-title;
+  align-self: center;
+}
+
+.announcements-title {
+  grid-area: announcements-title;
   align-self: center;
 }
 
@@ -228,54 +276,39 @@ input[type='search'] {
   grid-area: trending;
 }
 
-.trending-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-auto-rows: fit-content; 
-  row-gap: 10px;
-}
-
-.announcements-title {
-  grid-area: 'announcements-title';
-  align-self: center;
-}
-
 .announcements-grid-placement {
   grid-area: announcements;
 }
 
-.announcements-grid {
+.announcements-grid,
+.trending-grid {
   display: grid;
   grid-template-columns: 1fr;
+  row-gap: 10px;
 }
 
-.announcement-card-grid {
-  display: grid;
-  grid-template-columns: 70px 1fr;
-  column-gap: 10px;
-  align-items: flex-start;
-}
-
+.announcement-card-grid,
 .trending-card-grid {
   display: grid;
-  grid-template-columns: 90px 1fr;
+  grid-template-columns: minmax(60px, max-content) 1fr;
+  grid-auto-flow: column;
   column-gap: 20px;
   align-items: center;
 }
 
-.announcement-image, 
+.announcement-card-grid {
+  align-items: first baseline;
+}
+
+.announcement-image,
 .userpic-image {
   height: auto;
   justify-self: center;
+  width: 70px;
 }
 
 .userpic-image {
-  width: 75px;
   border-radius: 50%;
-}
-
-.announcement-image {
-  width: 60px;
 }
 
 /** Grid gap styles */
@@ -308,15 +341,15 @@ input[type='search'] {
 #userpic-small {
   border-radius: 50%;
 
-  width: 80px;
-  height: 80px;
+  width: 65px;
+  height: 65px;
 }
 
 #userpic-large {
   border-radius: 50%;
 
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
 }
 
 /** Font styles */
@@ -339,4 +372,8 @@ input[type='search'] {
 
 .border-shadow {
   box-shadow: 1px 2px 4px 0px var(--shadow-grey);
+}
+
+.border-thin-grey {
+  border: 1px solid var(--grey);
 }
