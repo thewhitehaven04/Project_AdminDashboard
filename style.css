@@ -8,8 +8,7 @@ html {
 }
 
 * {
-  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu,
-    Cantarell, 'Helvetica Neue', sans-serif;
+  font-family: 'Roboto';
   font-weight: 500;
   font-size: 16px;
 
@@ -26,10 +25,15 @@ html {
   --grey: #666666;
   --shadow-grey: #aaaaaa;
   --light-grey: rgba(139, 160, 189, 0.214);
+  --default-grey: rgb(233, 233, 237);
 }
 
 body {
   margin: 0px;
+}
+
+ul {
+  padding: 0px;
 }
 
 button {
@@ -59,21 +63,30 @@ li {
 }
 
 input[type='search'] {
+  -webkit-appearance: none;
+  appearance: none;
+  
   width: 750px;
   max-width: 100%;
-  appearance: none;
   box-shadow: 1px 2px 4px 0px var(--shadow-grey);
   background-color: var(--light-grey);
+  opacity: 0.62;
+  border-radius: 20px;
+}
+
+input > span {
   position: relative;
 }
 
-input[type='search']::before {
+input[type='search'] > span::before {
   position: absolute;
-  content: '<i class="fa-solid fa-magnifying-glass"></i>';
+  content: 'kek';
+
+  left: -100px;
 }
 
 input[type='search']:focus {
-  outline: 2px solid var(--shadow-grey);
+  outline: 2px solid var(--light-grey);
   outline-offset: 2px;
 }
 
@@ -138,7 +151,7 @@ input[type='search']:focus {
   grid-template-columns: 3fr 2fr;
   grid-template-rows: 1fr 1fr;
   align-items: center;
-  padding-inline: 80px;
+  padding-inline: 100px;
 }
 
 .header-grid-row {
@@ -196,7 +209,7 @@ input[type='search']:focus {
 .grid-card-controls {
   display: grid;
   grid-template-columns: repeat(auto-fill, 120px);
-  justify-items: center;
+  justify-items: start;
   gap: 15px;
 }
 
@@ -293,11 +306,11 @@ button:active {
   grid-template-columns: minmax(60px, max-content) 1fr;
   grid-auto-flow: column;
   column-gap: 20px;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .announcement-card-grid {
-  align-items: first baseline;
+  align-items: flex-start;
 }
 
 .announcement-image,
