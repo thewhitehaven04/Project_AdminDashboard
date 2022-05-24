@@ -4,81 +4,90 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>God's in his heaven. All's right with the world.</title>
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Averia+Serif+Libre" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     <script src="https://kit.fontawesome.com/c39ce3c901.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="container">
       <nav
-        class="nav-grid-col gap-30 padding-10 background-dark-blue color-light align-content-start border-shadow"
+        class="nav-grid-col gap-30 padding-10 background-dark color-main align-content-start border-shadow"
       >
         <div class="padding-10 flex-branding gap-15">
-          <span class="font-2rem">
-            <i class="fa-solid fa-table font-1_5rem font-bold"></i>
-            Dashboard
+          <span>
+            <img src="./images/nerv.png" alt="NERV logo" id="dashboard-logo" />
           </span>
         </div>
-        <ul class="grid-navbar-items gap-15 font-bold padding-10">
-          <li><i class="fa-solid fa-house-user"></i><span>Home</span></li>
-          <li><i class="fa-solid fa-user"></i><span>Profile</span></li>
-          <li><i class="fa-solid fa-message"></i><span>Messages</span></li>
-          <li><i class="fa-solid fa-timeline"></i><span>History</span></li>
-          <li><i class="fa-solid fa-list-check"></i><span>Tasks</span></li>
-          <li><i class="fa-solid fa-people-group"></i><span>Communities</span></li>
+        <ul class="grid-navbar-items gap-15 font-bold padding-10 font-2rem">
+          <li><i class="fa-solid fa-cross"></i><span>Home</span></li>
+          <li><i class="fa-solid fa-cross"></i><span>Profile</span></li>
+          <li><i class="fa-solid fa-cross"></i><span>Messages</span></li>
+          <li><i class="fa-solid fa-cross"></i><span>History</span></li>
+          <li><i class="fa-solid fa-cross"></i><span>Tasks</span></li>
+          <li><i class="fa-solid fa-cross"></i><span>Communities</span></li>
         </ul>
         <ul class="grid-navbar-items gap-15 font-bold padding-10">
-          <li><i class="fa-solid fa-gear"></i><span>Settings</span></li>
-          <li><i class="fa-solid fa-circle-question"></i><span>Support</span></li>
-          <li><i class="fa-solid fa-eye-slash"></i><span>Privacy</span></li>
+          <li><i class="fa-solid fa-cross"></i><span>Settings</span></li>
+          <li><i class="fa-solid fa-cross"></i><span>Support</span></li>
+          <li><i class="fa-solid fa-cross"></i><span>Privacy</span></li>
         </ul>
       </nav>
-      <header class="header-grid-row header-grid border-shadow gap-15 padding-v-15">
+      <header
+        class="header-grid-row header-grid background-light border-shadow gap-15 padding-v-15"
+      >
         <div class="header-search-grid-placement flex-search">
-          <i class="fa-solid fa-magnifying-glass font-1_5rem color-grey padding-10"></i>
+          <i class="fa-solid fa-magnifying-glass font-1_5rem padding-10"></i>
           <input type="search" class="font-1_5rem border-thin-grey padding-10" />
         </div>
         <div class="grid-header-account header-account-grid-placement">
           <div>
-            <button class="border-round">
+            <button class="border-round color-grey">
               <i class="fa-regular fa-bell font-1_5rem"></i>
             </button>
           </div>
           <div class="flex-account">
-            <img src="./images/userpic.jpg" id="userpic-small" />
-            <span class="font-bold">thewhitehaven04</span>
+            <img src="./images/userpic_gendo.jpg" id="userpic-small" />
+            <span class="font-bold">Gendo Ikari</span>
           </div>
         </div>
         <div class="grid-account-welcome account-welcome-grid-placement gap-15">
-          <img alt="Account picture" src="./images/userpic.jpg" id="userpic-large" />
+          <img alt="Account picture" src="./images/userpic_gendo.jpg" id="userpic-large" />
           <div>
-            <span class="font-1_5rem font-bold"> Hi there, </span>
+            <span class="font-1_5rem font-bold">Hello, </span>
             <br />
-            <span class="font-1_5rem font-bold">Someone (@thewhitehaven04)</span>
+            <span class="font-1_5rem font-bold">Gendo Ikari (@gendoikari)</span>
           </div>
         </div>
         <div class="card-controls-grid-placement">
           <ul class="grid-card-controls">
             <li>
-              <button class="font-1_5rem border-thin-grey color-black">New</button>
+              <button class="font-1_5rem border-thin-grey">New</button>
             </li>
             <li>
-              <button class="font-1_5rem border-thin-grey color-black">Upload</button>
+              <button class="font-1_5rem border-thin-grey">Upload</button>
             </li>
             <li>
-              <button class="font-1_5rem border-thin-grey color-black">Share</button>
+              <button class="font-1_5rem border-thin-grey">Share</button>
             </li>
           </ul>
         </div>
       </header>
-      <main class="main-grid gap-15 padding-h-40">
-        <span class="project-title align-center font-1_5rem font-bold">Your projects</span>
-        <div class="article-grid gap-15">
+      <main class="main-grid gap-30 padding-h-40">
+        <span class="project-title align-center font-2rem font-bold color-light text-shadow-2"
+          >NERV Projects</span
+        >
+        <div class="article-grid gap-30">
           <article class="article-card article-card-grid border-round border-shadow">
-            <span>Tic-Tac-Toe</span>
-            <p class="color-grey">A vanilla JS implementation of the classic game</p>
+            <span>Human Instrumentality Project</span>
+            <p class="color-grey">
+              The Human Instrumentality Project is SEELE's secret goal: the forced evolution of
+              humanity through bringing about Third Impact under their own control. The Human
+              Instrumentality Committee oversees NERV's work to bring about completion of the
+              project.
+            </p>
             <div class="self-j-end">
               <button class="border-thin-grey border-round">
                 <i class="fa-regular fa-star font-1_5rem"></i>
@@ -92,8 +101,11 @@
             </div>
           </article>
           <article class="article-card article-card-grid border-round border-shadow">
-            <span>Calculator</span>
-            <p class="color-grey">Your cookie-cutter calculator</p>
+            <span>Marduk Institute</span>
+            <p class="color-grey">
+              The Marduk Institute is the supposed selection committee that screens the global
+              population for 14 year old children who would make suitable Evangelion pilots
+            </p>
             <div class="self-j-end">
               <button class="border-thin-grey border-round">
                 <i class="fa-regular fa-star font-1_5rem"></i>
@@ -107,8 +119,14 @@
             </div>
           </article>
           <article class="article-card article-card-grid border-round border-shadow">
-            <span>Sign-up Form</span>
-            <p class="color-grey">A stylish form to show off CSS skills</p>
+            <span>MAGI</span>
+            <p class="color-grey">
+              Located in the central command post of NERV Headquarters, the Magi system, often
+              referred to as just the Magi, are three supercomputers who work in tandem to run
+              various systems in both NERV HQ. Unlike other computers, the Magi have personalities
+              built into them often resulting in each coming to different conclusions when presented
+              with issues.
+            </p>
             <div class="self-j-end">
               <button class="border-thin-grey border-round">
                 <i class="fa-regular fa-star font-1_5rem"></i>
@@ -122,38 +140,14 @@
             </div>
           </article>
           <article class="article-card article-card-grid border-round border-shadow">
-            <span>Etch-A-Sketch</span>
-            <p class="color-grey">The famous toy in JS</p>
-            <div class="self-j-end">
-              <button class="border-thin-grey border-round">
-                <i class="fa-regular fa-star font-1_5rem"></i>
-              </button>
-              <button class="border-thin-grey border-round">
-                <i class="fa-regular fa-eye font-1_5rem"></i>
-              </button>
-              <button class="border-thin-grey border-round">
-                <i class="fa-regular fa-share-from-square font-1_5rem"></i>
-              </button>
-            </div>
-          </article>
-          <article class="article-card article-card-grid border-round border-shadow">
-            <span>Rock-Paper-Scissors</span>
-            <p class="color-grey">Rock Paper Scissors in all of its glory</p>
-            <div class="self-j-end">
-              <button class="border-thin-grey border-round">
-                <i class="fa-regular fa-star font-1_5rem"></i>
-              </button>
-              <button class="border-thin-grey border-round">
-                <i class="fa-regular fa-eye font-1_5rem"></i>
-              </button>
-              <button class="border-thin-grey border-round">
-                <i class="fa-regular fa-share-from-square font-1_5rem"></i>
-              </button>
-            </div>
-          </article>
-          <article class="article-card article-card-grid border-round border-shadow">
-            <span>Landing Page</span>
-            <p class="color-grey">First steps in HTML and CSS</p>
+            <span>Evangelion</span>
+            <p class="color-grey">
+              An Evangelion, or Eva for short, is a giant, cybernetically modified humanoid entity
+              created by the organizations Gehirn and its successor Nerv. While the Evas' ostensible
+              function is to serve as general-purpose weapons against the threat of the Angels and
+              prevent the catastrophic event known as Third Impact, a more sinister truth to their
+              existence hides beneath the surface.
+            </p>
             <div class="self-j-end">
               <button class="border-thin-grey border-round">
                 <i class="fa-regular fa-star font-1_5rem"></i>
@@ -168,52 +162,50 @@
           </article>
         </div>
         <div>
-          <span class="announcements-title font-1_5rem font-bold">Announcements</span>
+          <span class="announcements-title font-2rem font-bold color-light text-shadow-2">Announcements</span>
         </div>
         <div
           class="announcements-grid-placement announcements-grid article-card border-round border-shadow"
         >
           <article class="announcement-card-grid">
-            <img class="announcement-image" src="./images/screwdriver.png" />
+            <img class="announcement-image" src="./images/Lelieldesign.webp" />
             <div>
-              <span>Site Maintenance</span>
-              <p class="color-grey">
-                The annual site maintentenance is underway. Some features may function incorrectly
-                or take a long time to respond.
-              </p>
+              <span>Leliel attack</span>
+              <p class="color-grey">Leliel is inbound towards Tokyo-3.</p>
             </div>
           </article>
           <article class="announcement-card-grid">
-            <img class="announcement-image" src="./images/React Logo.svg" alt="React logo" />
+            <img class="announcement-image" src="./images/nerv.png" alt="React logo" />
             <div>
-              <span>React 18 released</span>
-              <p class="color-grey">React 18 is now available on npm!</p>
+              <span>Evangelions to enter mass production confirmed</span>
+              <p class="color-grey">
+                Mass production of Evangelions is expected to commence in a few weeks time.
+              </p>
             </div>
           </article>
           <article class="announcement-card-grid">
             <img
               class="announcement-image"
-              src="./images/TypeScript logo.svg"
+              src="./images/ireul_simulation.webp"
               alt="TypeScript logo"
             />
             <div>
-              <span>TypeScript 4.7 adds ESM support in Node.js</span>
+              <span>Ireul defeated</span>
               <p class="color-grey">
-                Now available in a release candidate, the latest version of Microsoft's strongly
-                typed JavaScript introduces Node.js support for ECMAScript modules.
+                In a bravely fought battle, Ireul was defeated by NERV forces.
               </p>
             </div>
           </article>
         </div>
         <div>
-          <span class="trending-title font-1_5rem font-bold">Trending</span>
+          <span class="trending-title font-2rem font-bold color-light text-shadow-2">Trending</span>
         </div>
         <div class="trending-grid-placement article-card trending-grid border-round border-shadow">
           <article class="trending-card-grid">
-            <img class="userpic-image" src="./images/userpic_gendo.jpg" alt="TypeScript logo" />
+            <img class="userpic-image" src="./images/userpic_lilith.webp" alt="TypeScript logo" />
             <div>
-              <span>@gendoikari</span>
-              <p class="color-grey">Gendo Ikari</p>
+              <span>@lilith2nd</span>
+              <p class="color-grey">Lilith</p>
             </div>
           </article>
           <article class="trending-card-grid">
