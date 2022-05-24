@@ -1,3 +1,4 @@
+/** Generic declarations */
 html {
   box-sizing: border-box;
 }
@@ -16,7 +17,9 @@ html {
   --main: #fd0128;
   --dark: #171614;
   --bland: #bfc0c0;
+  --shadow: #969797;
   --dark-main: #8b1b19;
+  --grey: #555;
 }
 
 body {
@@ -27,12 +30,26 @@ ul {
   padding: 0px;
 }
 
+li {
+  list-style-type: none;
+}
+
 button {
   appearance: none;
   border: none;
-  background-color: white; 
+  background-color: white;
   color: var(--dark);
 }
+
+button:active {
+  transform: translateY(1.5px);
+}
+
+input[type='search'] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
 
 /** Color palette styles */
 .color-light {
@@ -55,16 +72,12 @@ button {
   background-color: var(--light);
 }
 
-li {
-  list-style-type: none;
-}
-
 /** The following classes define general page layout */
 .container {
-  height: 100vh;
   display: grid;
   grid-template-columns: minmax(250px, max-content) 4fr;
   grid-template-rows: max-content 3fr;
+  height: 100vh;
 
   row-gap: 3px;
 }
@@ -140,23 +153,6 @@ li {
   gap: 10px;
 }
 
-input[type='search'] {
-  -webkit-appearance: none;
-  appearance: none;
-  
-  width: 750px;
-  max-width: 100%;
-  box-shadow: 1px 2px 4px 0px var(--bland);
-  border: 1px solid var(--bland);
-  background-color: white;
-  opacity: 0.62;
-  border-radius: 20px;
-}
-
-input[type='search']:focus {
-  outline: 2px solid var(--bland);
-  outline-offset: 2px;
-}
 
 .header-account-grid-placement {
   grid-row: 1;
@@ -189,7 +185,7 @@ input[type='search']:focus {
   gap: 20px;
 }
 
-.grid-account-welcome {
+.flex-account-welcome {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -213,9 +209,6 @@ input[type='search']:focus {
   width: 140px;
 }
 
-button:active {
-  transform: translateY(1.5px);
-}
 
 /** The following css rulesets place descendant grids of the main element*/
 .main-grid-row {
@@ -245,13 +238,13 @@ button:active {
 .article-grid {
   grid-area: proj;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(800px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
 }
 
 .article-card {
   border: 1px solid var(--shadow-grey);
   background-color: var(--light);
-  padding: 20px;
+  padding: 30px;
 }
 
 .article-card-grid {
@@ -260,11 +253,30 @@ button:active {
   align-content: flex-start;
 }
 
+.article-description {
+  color: var(--grey);
+}
+
 .article-card-grid button,
 .grid-header-account button {
   width: fit-content;
   height: auto;
   padding: 5px;
+}
+
+.search-header {
+  width: 750px;
+  max-width: 100%;
+  box-shadow: 1px 2px 4px 0px var(--bland);
+  border: 1px solid var(--bland);
+  background-color: white;
+  opacity: 0.62;
+  border-radius: 20px;
+}
+
+.search-header:focus {
+  outline: 2px solid var(--bland);
+  outline-offset: 2px;
 }
 
 /** Announcement and trending column grids */
@@ -290,13 +302,14 @@ button:active {
 .trending-grid {
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 10px;
+  grid-auto-rows: max-content;
+  row-gap: 30px;
 }
 
 .announcement-card-grid,
 .trending-card-grid {
   display: grid;
-  grid-template-columns: minmax(60px, max-content) 1fr;
+  grid-template-columns: minmax(30px, max-content) 1fr;
   grid-auto-flow: column;
   column-gap: 20px;
   align-items: center;
@@ -310,14 +323,14 @@ button:active {
 .userpic-image {
   height: auto;
   justify-self: center;
-  width: 70px;
+  width: 80px;
 }
 
 .userpic-image {
   border-radius: 50%;
 }
 
-/** Grid gap styles */
+/** utility classes */
 .gap-30 {
   gap: 30px;
 }
@@ -326,13 +339,14 @@ button:active {
   gap: 15px;
 }
 
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
 /** Aligns content along the block axis */
 .align-content-start {
   align-content: start;
-}
-
-.align-content-center {
-  align-content: center;
 }
 
 .align-center {
@@ -381,13 +395,12 @@ button:active {
 }
 
 .border-shadow {
-  box-shadow: 1px 2px 4px 2px var(--dark);
+  box-shadow: 2px 2px 4px 2px var(--shadow);
 }
 
 .border-thin-grey {
-  border: 1px solid var(--bland)
+  border: 1px solid var(--bland);
 }
-
 
 #dashboard-logo {
   width: 240px;
