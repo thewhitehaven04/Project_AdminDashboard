@@ -218,7 +218,7 @@ input[type='search'] {
 
 .main-grid {
   display: grid;
-  grid-template-columns: 5fr 2fr;
+  grid-template-columns: 5fr 500px;
   grid-template-rows: 2rem 1fr 2rem 1fr;
   grid-template-areas:
     'proj-title announcements-title'
